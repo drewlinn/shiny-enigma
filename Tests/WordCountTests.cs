@@ -13,9 +13,9 @@ namespace WordCounter.Objects
       //Arrange
       RepeatCounter testInstance = new RepeatCounter("TestWord, This is a TestWord", "TestWord");
       //Act
-      int Repeats = testInstance.CountRepeat("TestWord, This is a TestWord.", "TestWord");
+      bool Repeats = testInstance.CountRepeat("TestWord, This is a TestWord.", "TestWord");
       //Assert
-      Assert.Equal(1, Repeats);
+      Assert.Equal(true, Repeats);
     }
 
     [Fact]
