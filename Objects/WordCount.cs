@@ -38,12 +38,8 @@ namespace WordCounter
     {
       int Repeats = 0;
       bool contains = InString.Contains(CountWord);
-      if (contains == true)
-      {
-        Repeats +=1;
-      }
       Console.WriteLine(Repeats);
-      return Repeats;
+      return contains;
     }
   }
 }

@@ -8,7 +8,7 @@ namespace WordCounter.Objects
   public class WordCounterTest
   {
     [Fact]
-    public void Counts_Word_Instances()
+    public void Checks_for_Word()
     {
       //Arrange
       RepeatCounter testInstance = new RepeatCounter("TestWord, This is a TestWord", "TestWord");
@@ -16,6 +16,17 @@ namespace WordCounter.Objects
       int Repeats = testInstance.CountRepeat("TestWord, This is a TestWord.", "TestWord");
       //Assert
       Assert.Equal(1, Repeats);
+    }
+
+    [Fact]
+    public void Counts_Word_Instances()
+    {
+      //Arrange
+
+      //Act
+
+      //Assert
+
     }
   }
 }
