@@ -34,12 +34,18 @@ namespace WordCounter
     //   _inString = newString;
     // }
 
-    public bool CountRepeat(string InString, string CountWord)
+    public int CountRepeat(string InString, string CountWord)
     {
-
+      int repeats = 0;
       bool contains = InString.Contains(CountWord);
-
-      return contains;
+      if (contains == true)
+        {
+          for (int i = 0; i >= InString.Length; i++)
+          {
+            repeats += 1;
+          }
+        }
+      return repeats;
     }
   }
 }

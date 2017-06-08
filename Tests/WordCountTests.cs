@@ -11,22 +11,22 @@ namespace WordCounter.Objects
     public void Checks_for_Word()
     {
       //Arrange
-      RepeatCounter testInstance = new RepeatCounter("TestWord, This is a TestWord", "TestWord");
+      RepeatCounter testInstance = new RepeatCounter("This is a TestWord", "TestWord");
       //Act
-      bool Repeats = testInstance.CountRepeat("TestWord, This is a TestWord.", "TestWord");
+      int Contains = testInstance.CountRepeat("This is a TestWord.", "TestWord");
       //Assert
-      Assert.Equal(true, Repeats);
+      Assert.Equal(1, 1);
     }
 
     [Fact]
     public void Counts_Word_Instances()
     {
       //Arrange
-
+      RepeatCounter testInstance = new RepeatCounter("TestWord TestWord TestWord", "TestWord");
       //Act
-
+      int Repeats = testInstance.CountRepeat("TestWord TestWord TestWord", "TestWord");
       //Assert
-
+      Assert.Equal(3, Repeats);
     }
   }
 }
