@@ -6,7 +6,7 @@ By Andrew Dalton, Epicodus
 
 Description
 
-
+An application that allows the user to check how many times a specified word appears in a provided string of words.
 
 Setup/Installation Requirements
 
@@ -14,12 +14,11 @@ Go to https://github.com/drewlinn/shiny-enigma using your web browser and click 
 
 Specifications
 
-| Behavior                                      | Input                           | Output                                    |
-|===============================================|=================================|===========================================|
-| User inputs a string                          | "This is a Test String"         | "This is a Test String"                   |
-| User inputs a word                            | "Test"                          | "Test"                                    |
-| User is told how often word appears in string | "This is a Test String", "Test" | "The word 'Test' appears 1 time."         |
-| App checks only for Full Word Match           | "This is a Test String", "Is"   | "The word 'Is' appears 1 time"            |
+| Behavior | Input | Output | Description |
+|:---------|:------|:-------|:------------|
+| **Counts instances of a word. | "TestWord" | "TestWord appears 1 time" | TestWord is clearly identifiable as an easily testable and memorable string. |
+| **Counts instances of word in a string. | "Testword, This is a TestWord.", "TestWord" | "TestWord appears 2 times." | The chosen word occurs twice so as to see that the counter is counting appropriately. |
+| **Counts only instances of that match the full word. | "TestString, This is a TestString" | "TestWord appears 0 times." | Words in the string share similar characters to the TestWord, but not all of them. |
 
 Known Bugs
 
@@ -35,6 +34,6 @@ This page was created in C# and HTML using Atom, Git, and the Windows Powershell
 
 License
 
-This software is license under the GPL license.
+This software is licensed under the GPL license.
 
 Copyright (c) 2015 Andrew Dalton, Epicodus
