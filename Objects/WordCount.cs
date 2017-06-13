@@ -8,44 +8,20 @@ namespace WordCounter
     private string _inString;
     private string _countWord;
 
-    public RepeatCounter(string InString, string CountWord)
+    public RepeatCounter(string inString, string countWord)
     {
-      _inString = InString;
-      _countWord = CountWord;
+      _inString = inString;
+      _countWord = countWord;
     }
 
-    public string GetWord()
+    public bool Contains(string inString, string countWord)
     {
-      return _countWord;
-    }
-
-    // public void SetWord(string newWord)
-    // {
-    //   _countWord = newWord;
-    // }
-
-    public string GetString()
-    {
-      return _inString;
-    }
-
-    // public void SetString(string newString)
-    // {
-    //   _inString = newString;
-    // }
-
-    public int CountRepeat(string InString, string CountWord)
-    {
-      int repeats = 0;
-      bool contains = InString.Contains(CountWord);
-      if (contains == true)
-        {
-          for (int i = 0; i >= InString.Length; i++)
-          {
-            repeats += 1;
-          }
-        }
-      return repeats;
+      bool Contains = inString.Contains(countWord);
+      if (Contains == true)
+      {
+        return true;
+      }
+      return false;
     }
   }
 }

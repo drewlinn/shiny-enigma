@@ -13,20 +13,20 @@ namespace WordCounter.Objects
       //Arrange
       RepeatCounter testInstance = new RepeatCounter("This is a TestWord", "TestWord");
       //Act
-      int Contains = testInstance.CountRepeat("This is a TestWord.", "TestWord");
+      bool contains = testInstance.Contains("This is a TestWord.", "TestWord");
       //Assert
-      Assert.Equal(1, 1);
+      Assert.Equal(true, contains);
     }
 
-    [Fact]
-    public void Counts_Word_Instances()
-    {
-      //Arrange
-      RepeatCounter testInstance = new RepeatCounter("TestWord TestWord TestWord", "TestWord");
-      //Act
-      int Repeats = testInstance.CountRepeat("TestWord TestWord TestWord", "TestWord");
-      //Assert
-      Assert.Equal(3, Repeats);
-    }
+    // [Fact]
+    // public void Counts_Word_Instances()
+    // {
+    //   //Arrange
+    //   RepeatCounter testInstance = new RepeatCounter("TestWord TestWord TestWord", "TestWord");
+    //   //Act
+    //   int Repeats = testInstance.CountRepeat("TestWord TestWord TestWord", "TestWord");
+    //   //Assert
+    //   Assert.Equal(3, Repeats);
+    // }
   }
 }
