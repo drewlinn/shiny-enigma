@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
 namespace WordCounter
 {
@@ -14,7 +14,7 @@ namespace WordCounter
       _countWord = countWord;
     }
 
-    public bool Contains(string inString, string countWord)
+    public static bool Contains(string inString, string countWord)
     {
       bool Contains = inString.Contains(countWord);
       if (Contains == true)
@@ -23,5 +23,22 @@ namespace WordCounter
       }
       return false;
     }
+
+    public int CountRepeat(string inString, string countWord)
+    {
+      int repeats = 0;
+      string[] stringWords = inString.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries);
+
+      for (int i = 0; i <= stringWords.Length; i++)
+      {
+        bool contains = stringWords.Contains(countWord);
+        if (contains == true)
+        {
+          repeats += 1;
+        }
+      }
+      return repeats;
+    }
+
   }
 }
