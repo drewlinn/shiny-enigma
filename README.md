@@ -18,7 +18,7 @@ Specifications
 |:---------|:------|:-------|:------------|
 | Checks for a word in a string. | "TestWord" | "TestWord appears 1 time" | TestWord is clearly identifiable as an easily testable and memorable string. |
 | Counts instances of word in a string. | "Testword, This is a TestWord.", "TestWord" | "TestWord appears 2 times." | The chosen word occurs twice so as to see that the counter is counting appropriately. |
-| Counts only instances of the word that match the full word. | "TestString, This is a TestString" | "TestWord appears 0 times." | Words in the string share similar characters to the TestWord, but not all of them. |
+| Counts only instances of the word that match the full word. | "This string contains the BestWord" | "TestWord appears 0 times." | Words in the string share similar characters to the TestWord, but not all of them. |
 
 Known Bugs
 

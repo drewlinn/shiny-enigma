@@ -27,5 +27,16 @@ namespace WordCounter.Objects
       //Assert
       Assert.Equal(3, Repeats);
     }
+
+    [Fact]
+    public void Counts_only_full_matches()
+    {
+      //Arrange
+      RepeatCounter testInstance = new RepeatCounter("This string contains the BestWord", "TestWord");
+      //Act
+      int Repeats = testInstance.CountRepeat("This string contains the BestWord", "TestWord");
+      //Assert
+      Assert.Equal(0, Repeats);
+    }
   }
 }
