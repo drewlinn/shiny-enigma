@@ -10,8 +10,8 @@ namespace WordCounter
 
     public RepeatCounter(string inString, string countWord)
     {
-      _inString = inString;
-      _countWord = countWord;
+      _inString = inString.ToLower();
+      _countWord = countWord.ToLower();
     }
 
     public int CountRepeat(string inString, string countWord)
