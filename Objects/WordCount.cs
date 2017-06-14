@@ -14,18 +14,18 @@ namespace WordCounter
       _countWord = countWord;
     }
 
-    // public int CountRepeat(string inString, string countWord)
-    // {
-    //   int repeats = 0;
-    //   string[] stringWords = inString.Split(' ');
-    //   foreach (string word in stringWords)
-    //   {
-    //     if (inString.Contains(countWord))
-    //     {
-    //       repeats += 1;
-    //     }
-    //   }
-    //   return repeats;
-    // }
+    public int CountRepeat(string inString, string countWord)
+    {
+      int repeats = 0;
+      string[] stringWords = inString.Split(' ');
+      foreach (string word in stringWords)
+      {
+        if (inString.Contains(countWord))
+        {
+          repeats += 1;
+        }
+      }
+      return repeats;
+    }
   }
 }
